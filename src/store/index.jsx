@@ -1,12 +1,11 @@
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
 
-//importando o reducer criado
-//import fruitsReducer from "./modules/fruits/reducer";
+import thunk from "redux-thunk";
 
-//combinando os reducers da aplicação
-//const reducers = combineReducers({ fruits: fruitsReducer });
+import digimonsReducer from "./modules/digimons/reducers";
 
-//passando os reducers combinados para a store
-//const store = createStore(reducers);
+const reducers = combineReducers({ digimons: digimonsReducer });
+
+const store = createStore(reducers, applyMiddleware(thunk));
 
 export default store;

@@ -1,0 +1,18 @@
+img {
+  width: 95px;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+li {
+  list-style: none;
+  border: 1px #ffffff solid;
+  padding: 10px;
+  margin: 10px;
+}
+li:hover {
+  cursor: pointer;
+  background-color: #1b1e24;
+}
