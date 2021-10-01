@@ -1,3 +1,4 @@
+import "./search.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addDigimonsThunk } from "../../store/modules/digimons/thunks.jsx";
@@ -24,7 +25,7 @@ export const Search = () => {
         />
         <button onClick={handleSearch}>Pesquisar</button>
       </div>
-      {error && <span>Pokemon não encontrado</span>}
+      {error && !input && <span>Pokemon não encontrado</span>}
     </div>
   );
 };
